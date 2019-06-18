@@ -7,4 +7,4 @@
 [consequence][location]Log name of this rule=System.out.println("Executed Rule: " + drools.getRule().getName() );
 [consequence][location]Flag with validation error message {message}=insert( new ValidationError( "{message}") );
 [consequence][location]Check if abn of entity identified as {$entity} is in the blacklist and save result in {result}=String {result} = service.checkabn($entity.abn);
-[consequence][location]If result identified as {result} does not contain {Active} flag with validation error message {message}=if (!{result}.contains("{Active}")) insert (new ValidationError("{result}") );
+[consequence][location]If result identified as {result} does not contain {Active} flag with validation error message {message}=if (!{result}.contains("{Active}")) insert (new ValidationError({result}) );
